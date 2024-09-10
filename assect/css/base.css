@@ -1,0 +1,116 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #232323;
+    --primary-color: #fe5430;
+    --border-color: #dbdbdb; 
+}
+/*  reset css */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* take base */
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+/* từ mơ tới rõ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* lớn dần */
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+/* căn giữa */
+.text-center {
+    text-align: center !important;
+}
+.mt-8 {
+    margin-top: 8px;
+}
+.mt-16 {
+    margin-top: 16px;
+}
+.mt-24 {
+    margin-top: 24px;
+}
+.mt-32 {
+    margin-top: 32px;
+}
+.w-100 {
+    width: 100% !important;
+}
+.col-n {
+    flex-direction: column;
+}
+/* grid cơ bản */
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex;
+}
+.col-full {
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-s-full {
+    width: 100% !important;
+
+}
+.col-3 {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 33.3333%
+    
+}
+.col-2 {
+    padding-left: 8px;
+    padding-right: 8px; 
+    width: 50%;
+}
+
+/* form đăng nhập ( modal ) */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    animation: fadeIn linear 0.2s;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+
+}
+
+.modal__body {
+    --growth-from: 0.7;
+    --growth-to: 1;
+    position: absolute;
+    width: 900px;
+    min-height: 470px;
+    background-color: var(--white-color);
+    animation: growth linear 0.2s;
+    margin: auto;
+    z-index: 1;
+}
